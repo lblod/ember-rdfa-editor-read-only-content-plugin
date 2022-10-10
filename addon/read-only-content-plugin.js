@@ -1,4 +1,4 @@
-import ReadOnlyContentSectionSpec from './models/inline-components/read-only-content-section';
+import ReadOnlyContentSectionSpec from './inline-components/read-only-content-section';
 
 export default class ReadOnlyContentPlugin {
   controller;

@@ -1,5 +1,6 @@
-import { InlineComponentSpec } from '@lblod/ember-rdfa-editor/model/inline-components/model-inline-component';
+import { InlineComponentSpec } from '@lblod/ember-rdfa-editor/core/model/inline-components/model-inline-component';
 import { isElement } from '@lblod/ember-rdfa-editor/utils/dom-helpers';
+import { readOnlyContentSectionStatic } from './read-only-content-section-static';
 export default class ReadOnlyContentSectionSpec extends InlineComponentSpec {
   matcher = {
     tag: this.tag,
@@ -15,9 +16,10 @@ export default class ReadOnlyContentSectionSpec extends InlineComponentSpec {
       return null;
     },
   };
-  _renderStatic() {
-    // TODO: should be implemented when static version of inline components work correctly
-    return '';
+  _renderStatic(props) {
+    return readOnlyContentSectionStatic({
+      link: props.link,
+    });
   }
   constructor(controller) {
     super('inline-components/read-only-content-section', 'div', controller);
