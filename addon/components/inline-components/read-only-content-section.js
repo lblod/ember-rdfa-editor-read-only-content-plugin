@@ -24,9 +24,10 @@ export default class ReadOnlyContentSectionComponent extends Component {
 
   @action
   detach() {
-    this.editorController.executeCommand(
-      'remove-component',
-      this.componentController.model
-    );
+    this.editorController.perform((tr) => {
+      tr.commands.removeComponent({
+        component: this.componentController.model,
+      });
+    });
   }
 }

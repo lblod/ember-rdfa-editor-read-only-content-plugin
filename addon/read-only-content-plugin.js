@@ -5,8 +5,8 @@ export default class ReadOnlyContentPlugin {
     return 'read-only-content';
   }
 
-  initialize(controller) {
-    controller.registerInlineComponent(
+  initialize(transaction, controller) {
+    transaction.registerInlineComponent(
       new ReadOnlyContentSectionSpec(controller)
     );
   }
