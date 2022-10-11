@@ -6,7 +6,7 @@ export default class ReadOnlyContentSectionComponent extends Component {
     return this.args.componentController;
   }
 
-  get editorController(){
+  get editorController() {
     return this.args.editorController;
   }
 
@@ -24,10 +24,9 @@ export default class ReadOnlyContentSectionComponent extends Component {
 
   @action
   detach() {
-    this.editorController.perform((tr) => {
-      tr.commands.removeComponent({
-        component: this.componentController.model,
-      });
-    });
+    this.editorController.executeCommand(
+      'remove-component',
+      this.componentController.model
+    );
   }
 }

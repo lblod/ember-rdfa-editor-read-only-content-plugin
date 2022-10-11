@@ -1,4 +1,4 @@
-import { InlineComponentSpec } from '@lblod/ember-rdfa-editor/core/model/inline-components/model-inline-component';
+import { InlineComponentSpec } from '@lblod/ember-rdfa-editor/model/inline-components/model-inline-component';
 import { isElement } from '@lblod/ember-rdfa-editor/utils/dom-helpers';
 import { readOnlyContentSectionStatic } from './read-only-content-section-static';
 export default class ReadOnlyContentSectionSpec extends InlineComponentSpec {
