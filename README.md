@@ -1,7 +1,6 @@
 ember-rdfa-editor-read-only-content-plugin
 ==============================================================================
-
-[Short description of the addon.]
+:warning: This ember addon is no longer maintained.
 
 
 Compatibility
